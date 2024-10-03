@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="LuxurySpa - Spa & Beauty HTML Template" />
+    <meta name="author" content="potenzaglobalsolutions.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>LuxurySpa - Spa & Beauty HTML Template</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Global Compulsory (Do not remove)-->
+    <link rel="stylesheet" href="css/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <!-- Page CSS Implementing Plugins (Remove the plugin CSS here if site does not use that feature)-->
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/slick/slick-theme.css" />
+    <!-- Template Style -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--=================================
+    preloader -->
+    <div id="pre-loader">
+      <img src="images/pre-loader/loader-01.svg" alt="" />
+    </div>
+    <!--=================================
+    preloader -->
+
+    <!--=================================
+    Header -->
+    <header class="header header-style-02 header-sticky">
+      <nav class="navbar navbar-static-top navbar-expand-lg">
+        <div class="container main-header position-relative">
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse"
+          >
+            <i class="fas fa-align-left"></i>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img class="img-fluid" src="images/logo.svg" alt="logo" />
+            <img
+              class="img-fluid sticky"
+              src="images/logo-dark.svg"
+              alt="logo"
+            />
+          </a>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="packages.html">Packages</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="add-listing">
+            <div class="search">
+              <ul class="list-unstyled mb-0">
+                <li class="dropdown nav-item header-search">
+                  <a href="#search"> <i class="fa fa-search"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="woo-action">
+              <ul class="list-unstyled">
+                <li class="wishlist">
+                  <a href="wishlist.html">
+                    <span class="wishlist-icon icon">
+                      <i class="fa-regular fa-heart"></i>
+                    </span>
+                    <span class="wishlist-count count">0</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="woo-action">
+              <ul class="list-unstyled">
+                <li class="cart">
+                  <a
+                    href="#"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#cartoffcanvasRight"
+                    aria-controls="offcanvasRight"
+                  >
+                    <span class="cart-icon icon"
+                      ><i class="fa-brands fa-opencart"></i
+                    ></span>
+                    <span class="cart-count count">2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a
+              class="menu-btn"
+              href="#"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
+              <svg
+                width="40"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="#fff"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.3333 60H33.3333"
+                  stroke="#fff"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13.3333 40H53.3333"
+                  stroke="#fff"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M13.3333 20H66.6666"
+                  stroke="#fff"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--=================================
+    Header -->
+    <!--=================================
+    Cart menu -->
+    <div
+      class="cart-side-menu offcanvas offcanvas-end"
+      tabindex="-1"
+      id="cartoffcanvasRight"
+      style="
+        background-image: url(images/bg/bg-01.png);
+        background-size: cover;
+        background-position: center right;
+      "
+    >
+      <div class="offcanvas-header">
+        <h5 class="mb-0">Shopping Cart</h5>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="dropdown-menu-right">
+          <ul class="cart-list">
+            <li class="d-flex">
+              <a class="remove-item" href="#"><i class="fas fa-times"></i></a>
+              <img class="img-fluid me-3" src="images/shop/01.jpg" alt="" />
+              <div class="cart-info">
+                <a href="#">Sandalwood Soap</a>
+                <span class="d-block">$12.99</span>
+              </div>
+            </li>
+            <li class="d-flex">
+              <a class="remove-item" href="#"><i class="fas fa-times"></i></a>
+              <img class="img-fluid me-3" src="images/shop/02.jpg" alt="" />
+              <div class="cart-info">
+                <a href="#">Body Lotion</a>
+                <span class="d-block">$28.72</span>
+              </div>
+            </li>
+          </ul>
+          <div class="cart-footer">
+            <div class="d-flex mb-3">
+              <b class="me-auto text-dark">Subtotal:</b>
+              <span class="cart-total">$41.21</span>
+            </div>
+            <div class="d-inline-block d-sm-flex">
+              <a class="col btn btn-secondary btn-sm me-2 px-4" href="cart.html"
+                >View Cart</a
+              >
+              <a
+                class="col btn btn-sm btn-primary ms-0 mt-1 mt-sm-0 ms-sm-2 px-4"
+                href="checkout.html"
+                >Checkout</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Cart menu -->
+    <!--=================================
+    Search -->
+    <div id="search">
+      <button type="button" class="close">×</button>
+      <form>
+        <input type="search" value="" placeholder="Enter keyword" />
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+    <!--=================================
+    Search -->
+    <!--=================================
+    Right menu -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasRight"
+      style="
+        background-image: url(images/bg/bg-01.png);
+        background-size: cover;
+        background-position: center right;
+      "
+    >
+      <div class="offcanvas-header text-end justify-content-end p-4">
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div
+        class="offcanvas-body p-4 p-sm-5 d-flex align-content-between flex-wrap justify-content-center"
+      >
+        <div class="sidebar-menu">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                class="img-fluid logo-dark"
+                src="images/logo-dark.svg"
+                alt="Main logo"
+              />
+            </a>
+          </div>
+          <div class="section-title mt-5">
+            <h3 class="title mb-3">About us</h3>
+            <p>
+              Execution is the single biggest factor in achievement so the
+              faster and better your execution.
+            </p>
+          </div>
+          <div class="mt-5">
+            <h3 class="mb-3">Contact Info</h3>
+            <p>
+              6580 Allison Turnpike Creminfort,<br />
+              AL 32808-4509
+            </p>
+            <p>
+              Sunday to Tuesday <br />
+              (09:00 To 22:00)
+            </p>
+            <p>
+              Friday to Saturday <br />
+              (11:00 To 19:00)
+            </p>
+          </div>
+          <div class="social-icon mt-5">
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=================================
+    Right menu -->
+    <!--=================================
+    banner -->
+    <section
+      class="inner-header space-ptb bg-holder bg-overlay-secondary-50"
+      style="background-image: url(images/bg/02.jpg)"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h1 class="text-white">Shop Single</h1>
+            <ul class="breadcrumb mb-0 p-0">
+              <li class="breadcrumb-item">
+                <a href="index.html"><i class="fa fa-home pe-2"></i>Home</a>
+              </li>
+              <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+              <li class="breadcrumb-item active"><span>Shop Details</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    banner -->
+    <!--=================================
+    product single -->
+    <section class="space-ptb shop-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-md-5 mb-4 mb-lg-0">
+                <div class="slider-slick">
+                  <div class="slider slider-for detail-big-car-gallery">
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/01.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/02.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/03.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/04.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/05.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/06.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="slider slider-nav mt-2">
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/01.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/02.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/03.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/04.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/05.jpg" alt="" />
+                    </div>
+                    <div class="bg-light">
+                      <img class="img-fluid" src="images/shop/06.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="product-detail">
+                  <div class="product-rating d-flex mb-3 align-items-center">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <i class="far fa-star text-warning"></i>
+                    <a href="#reviews" class="text-dark ms-3" rel="nofollow"
+                      ><span class="count">4</span> customer reviews</a
+                    >
+                  </div>
+                  <h2 class="mb-4">Set of Skincare</h2>
+                  <div class="product-price-rating">
+                    <div class="product-prize">
+                      <p><span class="me-2">$24.99</span>$12.99</p>
+                    </div>
+                  </div>
+                  <p class="pb-3">
+                    We know this in our gut, but what can we do about it? How
+                    can we motivate ourselves? One of the most difficult aspects
+                    of achieving success is staying motivated over the long
+                    haul,it must come from within as the natural product of your
+                    desire to achieve something and your belief that you are
+                    capable to succeed.
+                  </p>
+                  <p class="mb-0">
+                    Commitment is something that comes from understanding that
+                    everything has its price and then having the willingness to
+                    pay that price. This is important because nobody wants to
+                    put significant effort into something, only to find out
+                    after the fact that the price was too high.The price is
+                    something not necessarily defined as financial.
+                  </p>
+                  <hr class="hr-dark" />
+                  <div
+                    class="justify-content-start align-items-center d-flex flex-wrap add-to-cart-input"
+                  >
+                    <div class="product-summary">
+                      <a class="" href="#"><i class="far fa-heart"></i></a>
+                    </div>
+                    <div class="qty">
+                      <span class="minus">-</span>
+                      <input
+                        type="number"
+                        class="count qty"
+                        name="qty"
+                        value="0"
+                        min="0"
+                        max="10"
+                      />
+                      <span class="plus">+</span>
+                    </div>
+                    <a class="btn btn-primary" href="checkout.html">
+                      <span> Buy now </span>
+                    </a>
+                  </div>
+                  <div class="product-detail-meta mt-4">
+                    <span
+                      >Category: <a href="#">Beauty, </a>
+                      <a href="#"> Massage,</a> <a href="#">Luxury</a></span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-lg-5 mt-3">
+          <div class="col-lg-12">
+            <div class="nav-tabs-02">
+              <nav>
+                <ul
+                  class="nav nav-tabs mb-4 justify-content-center"
+                  id="myTab2"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link active"
+                      id="nav-description-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-description"
+                      role="tab"
+                      aria-controls="nav-description"
+                      aria-selected="true"
+                      >Description</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="nav-reviews-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-reviews"
+                      role="tab"
+                      aria-controls="nav-reviews"
+                      aria-selected="false"
+                      >Reviews</a
+                    >
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <a
+                      class="nav-link"
+                      id="nav-custom-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-custom"
+                      role="tab"
+                      aria-controls="nav-custom"
+                      aria-selected="false"
+                      >Custom</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div class="tab-content" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-description"
+                  role="tabpanel"
+                  aria-labelledby="nav-description-tab"
+                >
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h3 class="mb-3">
+                        What is the first step in any process?
+                      </h3>
+                      <p class="mb-4">
+                        Focus is having the unwavering attention to complete
+                        what you set out to do. There are a million distractions
+                        in every facet of our lives. Telephones and e-mail,
+                        clients and managers, spouses and kids, TV, newspapers
+                        and radio – the distractions are everywhere and endless.
+                        Everyone wants a piece of us and the result can be
+                        totally overwhelming.SMART is an acronym for Specific,
+                        Measurable, Achievable, Realistic and Time Sensitive –
+                        S-M-A-R-T. Knowing what you want and setting SMART goals
+                        as mileposts on your quest cannot help but give you
+                        clarity!
+                      </p>
+                      <h3 class="mb-3">
+                        how can we stay on course with all the distractions in
+                        our lives?
+                      </h3>
+                      <p class="mb-4">
+                        The best way is to develop and follow a plan. Start with
+                        your goals in mind and then work backwards to develop
+                        the plan. What steps are required to get you to the
+                        goals? Make the plan as detailed as possible. Try to
+                        visualize and then plan for, every possible setback.
+                        Commit the plan to paper and then keep it with you at
+                        all times. Review it regularly and ensure that every
+                        step takes you closer to your Vision and Goals. If the
+                        plan doesn’t support the vision then change it!
+                      </p>
+                      <h3 class="mb-3">
+                        What can you do to form the habit of becoming a success?
+                      </h3>
+                      <p class="mb-4">
+                        Commitment is something that comes from understanding
+                        that everything has its price and then having the
+                        willingness to pay that price. This is important because
+                        nobody wants to put significant effort into something,
+                        only to find out after the fact that the price was too
+                        high.The price is something not necessarily defined as
+                        financial. It could be time, effort, sacrifice, money or
+                        perhaps, something else. The point is that we must be
+                        fully aware of the price and be willing to pay it, if we
+                        want to have success.We all carry a lot of baggage,
+                        thanks to our upbringing. The majority of people carry
+                        with them, an entire series of self-limiting beliefs
+                        that will absolutely stop, and hold them back from,
+                        success. Things like “I’m not good enough”, “I’m not
+                        smart enough”, “I’m not lucky enough”,
+                      </p>
+                      <h3 class="mb-3">What will your daily life be like?</h3>
+                      <p class="mb-0">
+                        You will begin to realize why this exercise is called
+                        the Dickens Pattern (with reference to the ghost showing
+                        Scrooge some different futures) as you notice that the
+                        idea of this exercise is to hypnotize yourself to be
+                        aware of two very real possibilities for your future. ,
+                        just have a think about something that you know you need
+                        to be doing, but are not. Then with that thing in mind,
+                        follow these simple steps. Step One: Get yourself nice
+                        and relaxed and settled. Concentrate on your breathing,
+                        engage in the moment and spend some time being still,
+                        quiet and drift inside of your own mind. Hypnotize
+                        yourself here. Step two: Use your imagination to imagine
+                        walking down the path of your life. Ok, I know that some
+                        of you just cried out “but I can’t visualize!” First up,
+                        if you believe you can’t then of course you can’t.
+                        Second up, just imagine these things. They do not have
+                        to be in cinema screen perfect detail. You can remember
+                        what color what your front door is, right? You can
+                        remember what your childhood bedroom is like, right?
+                        That is your imagination doing that.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-reviews"
+                  role="tabpanel"
+                  aria-labelledby="nav-reviews-tab"
+                >
+                  <div class="row">
+                    <div class="col-12">
+                      <h3 class="mb-4 fw-600">
+                        3 Reviews for women’s fabric mix midi wrap jumpsuit
+                      </h3>
+                      <div class="commentlist">
+                        <div class="comment-author">
+                          <img
+                            class="avatar avatar-lg"
+                            src="images/avatar/01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="comment-content">
+                          <div class="reviews">
+                            <p class="meta">
+                              <strong>Paul Flavius </strong>(verified owner) –
+                              November 8, 2022
+                            </p>
+                            <div class="rating">
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star-half-alt"></i>
+                              <i class="far fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p>
+                            It is truly amazing the damage that we, as parents,
+                            can inflict on our children. So why do we do it? For
+                            the most part, we don’t do it intentionally or with
+                            malice. In the majority of cases, who says the wrong
+                            thing at the wrong time, and the message sticks – as
+                            simple as that!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="commentlist">
+                        <div class="comment-author">
+                          <img
+                            class="avatar avatar-lg"
+                            src="images/avatar/02.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="comment-content">
+                          <div class="reviews">
+                            <p class="meta">
+                              <strong>Frank Smith </strong>(verified owner) –
+                              November 8, 2022
+                            </p>
+                            <div class="rating">
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star-half-alt"></i>
+                              <i class="far fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p>
+                            Nothing changes until something moves” – this is the
+                            battle cry of author and journalist Robert Ringer.
+                            And he is absolutely correct. Not all of the
+                            decision-making, clarity, planning, focus and belief
+                            in the world, will get you to where you want to be,
+                            without taking action!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="commentlist">
+                        <div class="comment-author">
+                          <img
+                            class="avatar avatar-lg"
+                            src="images/avatar/01.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="comment-content">
+                          <div class="reviews">
+                            <p class="meta">
+                              <strong>Joanna williams </strong>(verified owner)
+                              – December 8, 2022
+                            </p>
+                            <div class="rating">
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star"></i>
+                              <i class="text-warning fas fa-star-half-alt"></i>
+                              <i class="far fa-star text-warning"></i>
+                            </div>
+                          </div>
+                          <p>
+                            Success isn’t really that difficult. There is a
+                            significant portion of the population here in North
+                            America, that actually want and need success to be
+                            hard! Why? So they then have a built-in excuse when
+                            things don’t go their way! Pretty sad situation, to
+                            say the least.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <h3 class="fw-600 mb-3">Add a review</h3>
+                        <p>
+                          Your email address will not be published. Required
+                          fields are marked *
+                        </p>
+                      </div>
+                      <form class="row mt-4 align-items-center">
+                        <div class="mb-3 col-sm-6">
+                          <label class="form-label">Name*</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="mb-3 col-sm-6">
+                          <label class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="col-sm-12">
+                          <label class="form-label">Your review *</label>
+                          <div class="mb-3">
+                            <textarea
+                              class="form-control"
+                              rows="5"
+                              id="comment"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div class="form-check col-sm-12 ps-3">
+                          <div class="form-check mb-3">
+                            <input
+                              class="form-check-input"
+                              type="checkbox"
+                              value=""
+                              id="flexCheckChecked02"
+                              checked=""
+                            />
+                            <label
+                              class="form-check-label ps-2"
+                              for="flexCheckChecked02"
+                            >
+                              Save my name, email, and website in this browser
+                              for the next time I comment.
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <label class="form-label">Your review *</label>
+                          <div class="product-rating">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                          </div>
+                        </div>
+                        <div class="col-sm-12">
+                          <a class="btn btn-primary btn-md mt-4" href="#">
+                            Submit
+                          </a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-custom"
+                  role="tabpanel"
+                  aria-labelledby="nav-custom-tab"
+                >
+                  <div class="row">
+                    <div class="col-12">
+                      <p>
+                        <strong>Thanks to our upbringing</strong>. The majority
+                        of people carry with them, an entire series of
+                        self-limiting beliefs that will absolutely stop, and
+                        hold them back from, success. Things like “I’m not good
+                        enough”, “I’m not smart enough”, “I’m not lucky enough”,
+                        and the worst, “I’m not worthy” are but a few of the
+                        self-limiting beliefs I have encountered. We carry them
+                        with us like rocks in a knapsack, and then use them to
+                        sabotage our success. So, how twisted is that.It is
+                        truly amazing the damage that we, as parents, can
+                        inflict on our children. So why do we do it? For the
+                        most part, we don’t do it intentionally or with malice.
+                        In the majority of cases
+                      </p>
+                      <h3 class="mb-3">What do I really want?</h3>
+                      <p class="mb-0">
+                        Focus is having the unwavering attention to complete
+                        what you set out to do. There are a million distractions
+                        in every facet of our lives. Telephones and e-mail,
+                        clients and managers, spouses and kids, TV, newspapers
+                        and radio – the distractions are everywhere and endless.
+                        Everyone wants a piece of us and the result can be
+                        totally overwhelming.
+                      </p>
+                      <p class="mt-2 mb-0">
+                        The best way is to develop and follow a plan. Start with
+                        your goals in mind and then work backwards to develop
+                        the plan. What steps are required to get you to the
+                        goals? Make the plan as detailed as possible. Try to
+                        visualize and then plan for, every possible setback.
+                        Commit the plan to paper and then keep it with you at
+                        all times. Review it regularly and ensure that every
+                        step takes you closer to your Vision and Goals. If the
+                        plan doesn’t support the vision then change it!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    product single -->
+    <!--=================================
+    Related products -->
+    <section class="space-pb">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="title mb-5">
+              <h2>Related products</h2>
+            </div>
+            <!-- owl-carousel -->
+            <div
+              class="owl-carousel product"
+              data-nav-dots="false"
+              data-nav-arrow="false"
+              data-items="4"
+              data-sm-items="2"
+              data-lg-items="3"
+              data-md-items="3"
+              data-xs-items="2"
+              data-autoplay="true"
+            >
+              <!-- product-01 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/01.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Set of Skincare</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$24.99</span>$12.99</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-01 END -->
+              <!-- product-02 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/02.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Monstera </a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$35.90</span>$28.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-02 END -->
+              <!-- product-03 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/03.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Cinnamon Soap</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p>$12.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-03 END -->
+              <!-- product-04 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/04.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Body Care</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p>$13.70</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-04 END -->
+              <!-- product-05 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/05.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">Personal Care Kit</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$35.90</span>$17.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-05 END -->
+              <!-- product-06 START -->
+              <div class="item">
+                <div class="product-item">
+                  <div class="product-image thumbnail-bg">
+                    <img
+                      class="img-fluid"
+                      src="images/shop/06.jpg"
+                      alt="image"
+                    />
+                    <div class="custom-icon">
+                      <ul class="list-unstyled">
+                        <li>
+                          <a href="#"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="product-content">
+                    <div class="product-info">
+                      <div class="product-title">
+                        <a href="shop-single.html">lavender bottle oil</a>
+                      </div>
+                      <div class="product-star">
+                        <ul class="list-unstyled">
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="fas fa-star"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                          <li><i class="far fa-star-half-alt"></i></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" class="category">Beauty</a>
+                    <div class="product-prize">
+                      <p><span class="me-2">$25.90</span>$18.72</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- product-06 END -->
+            </div>
+            <!-- owl-carousel -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=================================
+    Related products -->
+    <!--=================================
+    footer-->
+    <footer class="footer bg-overlay-theme-10">
+      <div class="min-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <h5>Contact Information</h5>
+              <div class="footer-contact-info">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <i class="fas fa-fw fa-map-marker-alt text-primary"></i
+                    ><span
+                      >6580 Allison Turnpike Creminfort, AL 32808-4509</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-fw fa-phone text-primary"></i
+                    ><span>(123) 345-6789</span>
+                  </li>
+                  <li>
+                    <i class="far fa-fw fa-envelope text-primary"></i
+                    ><span>support@luxuryspa.com</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="social-icon mt-4">
+                <ul>
+                  <li>
+                    <a href="www.facebook.com"
+                      ><i class="fa-brands fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="www.x.com"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="www.linkedin.com"
+                      ><i class="fab fa-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="www.instagram.com"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 mt-4 mt-md-0 pl-lg-5">
+              <div class="footer-link">
+                <h5>Navigation</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="shop.html">Shop</a></li>
+                  <li><a href="packages.html">Packages</a></li>
+                  <li><a href="about-us.html">About us</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact-us.html">Contact us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+              <div class="footer-link">
+                <h5>Useful Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  <li>
+                    <a href="terms-and-conditions.html">Terms and Conditions</a>
+                  </li>
+                  <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+              <h5>Newsletter</h5>
+              <div class="footer-subscribe">
+                <p class="mb-3">
+                  Sign Up to our Newsletter to get the latest news and offers.
+                </p>
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Your Email"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Get Notified
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="row align-items-center copyright text-md-start text-center"
+          >
+            <div class="col-12 col-md-6">
+              <p class="mb-0">
+                &copy; Copyright
+                <span id="copyright">
+                  <script>
+                    document
+                      .getElementById("copyright")
+                      .appendChild(
+                        document.createTextNode(new Date().getFullYear())
+                      );
+                  </script></span
+                >
+                <a href="index.html"> LuxurySpa </a> All Rights Reserved
+              </p>
+            </div>
+            <div class="col-12 col-md-6 text-md-end text-center mt-3 mt-md-0">
+              <p>
+                Develop and design by <a href="#">Potenza Global Solutions</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--=================================
+    footer-->
+    <!--=================================
+    Back To Top-->
+    <div id="back-to-top" class="back-to-top">
+      <a href="#"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <!--=================================
+    Back To Top-->
+    <!--=================================
+    Javascript -->
+    <!-- JS Global Compulsory (Do not remove)-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/popper/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- Page JS Implementing Plugins (Remove the plugin script here if site does not use that feature)-->
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/slick/slick.min.js"></script>
+    <!-- Template Scripts (Do not remove)-->
+    <script src="js/custom.js"></script>
+  </body>
+</html>
