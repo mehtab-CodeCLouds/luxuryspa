@@ -747,7 +747,7 @@ products
 
 // =======================================================================
 // add to cart content
-function cartItemContent(id, name, images, mrp, sellingPrice, quantity = 1) {
+function cartItemContent(id, name, images, mrp, sellingPrice, quantity) {
   const cartItem = document.createElement("li");
   cartItem.classList.add("d-flex", "cart-item");
   cartItem.dataset.id = id;
@@ -775,11 +775,6 @@ function cartItemContent(id, name, images, mrp, sellingPrice, quantity = 1) {
 
   return cartItem;
 }
-
-// const cart-item
-// function cartItemCheck(){
-
-// }
 
 const cartDetails = document.querySelector("#cart-products-wrap");
 
@@ -910,19 +905,13 @@ const renderCartItem = (productData) => {
     productData.name,
     productData.images,
     productData.mrp,
-    productData.sellingPrice
+    productData.sellingPrice,
+    productData.quantity
   );
 
-  // const existingCartProducts = cartList?.children;
-
-  // Array.from(existingCartProducts)?.forEach((currProduct) => {
-  //   console.log(currProduct);
-  // });
   existingCartProducts.forEach((currCartProduct) => {
     productAll.forEach((currStorageProduct) => {
       if (currCartProduct.dataset.id === currStorageProduct.id) {
-        console.log(currCartProduct);
-
         currCartProduct.remove();
       }
     });
@@ -933,53 +922,64 @@ const renderCartItem = (productData) => {
 
 // add to cart click
 allProductsContainer.forEach((currProductSec) => {
-  currProductSec.addEventListener("click", (e) => {
-    const productItemBtn = e.target.closest(".cart-btn");
-    if (!productItemBtn) return;
-
-    e.preventDefault();
-    const productItem = e.target.closest(".product-item");
-
-    // Extract product details from the data attributes
-    const productData = {
-      id: productItem.dataset.id,
-      name: productItem.dataset.name,
-      images: productItem.dataset.images,
-      mrp: productItem.dataset.mrp,
-      sellingPrice: parseFloat(productItem.dataset.sellingPrice),
-      quantity: 1,
-    };
-
-    productAll = getCartProducts();
-    // Check if the product is already in the cart
-    const existingProduct = productAll.find(
-      (item) => item.id === productData.id
-    );
-
-    // cartList.querySelector(`[data-id="${existingProduct.id}"`).remove();
-    if (existingProduct) {
-      // If the product is already in the cart, increase the quantity
-      existingProduct.quantity += 1;
-
-      // Update the quantity in the DOM
-      const cartItem = cartList.querySelector(
-        `.cart-item[data-id="${existingProduct.id}"] .quantity`
-      );
-      cartItem.textContent = `Qty: ${existingProduct.quantity}`;
-    } else {
-      // If the product is not in the cart, add it to the cart
-      renderCartItem(productData);
-      productAll.push(productData);
-    }
-
-    calculateCartTotal();
-    updateCartCount();
-    emptyCartContent();
-    shippingCalc();
-    saveCartToLocalStorage();
-    cleanuUpDom();
-  });
+  currProductSec.addEventListener("click", addCart);
 });
+
+function addCart(e) {
+  const productItemBtn = e.target.closest(".cart-btn");
+  if (!productItemBtn) return;
+
+  e.preventDefault();
+  const productItem = e.target.closest(".product-item");
+
+  // Get the selected quantity from the input field
+  const cartQuantityInput = productItem.querySelector(".count.qty");
+  const selectedQuantity = cartQuantityInput
+    ? parseInt(cartQuantityInput.value) || 1
+    : 1;
+
+  // Extract product details from the data attributes
+  const productData = {
+    id: productItem.dataset.id,
+    name: productItem.dataset.name,
+    images: productItem.dataset.images,
+    mrp: productItem.dataset.mrp,
+    sellingPrice: parseFloat(productItem.dataset.sellingPrice),
+    quantity: selectedQuantity, // Default quantity is set to 1
+  };
+
+  productAll = getCartProducts(); // Get all products currently in the cart
+
+  // Check if the product is already in the cart
+  const existingProduct = productAll.find((item) => item.id === productData.id);
+
+  if (existingProduct) {
+    // If the product is already in the cart, increase its quantity
+    existingProduct.quantity += selectedQuantity;
+
+    // Update the quantity in the DOM
+    const cartItem = cartList.querySelector(
+      `.cart-item[data-id="${existingProduct.id}"] .quantity`
+    );
+    if (cartItem) {
+      cartItem.textContent = `Qty: ${existingProduct.quantity}`;
+    }
+  } else {
+    // If it's a new product, set the correct quantity and add it to the cart
+    productData.quantity = selectedQuantity;
+
+    renderCartItem(productData); // Render the product in the cart with the correct quantity
+    productAll.push(productData);
+  }
+
+  // Save and update cart related information
+  calculateCartTotal();
+  updateCartCount();
+  emptyCartContent();
+  shippingCalc();
+  saveCartToLocalStorage();
+  cleanuUpDom();
+}
 
 function cleanuUpDom() {
   productAll = getCartProducts();
@@ -1097,10 +1097,10 @@ productAll.forEach((currProduct) => {
                           <a href="#"><i class="far fa-trash-alt"></i></a>
                         </td>
                         <td class="product-thumbnail">
-                          <a href="#"><img src="${images}" alt=""></a>
+                          <a href="shop-single.html"><img src="${images}" alt=""></a>
                         </td>
                         <td class="product-name">
-                          <a href="#">${name}</a>
+                          <a href="shop-single.html">${name}</a>
                         </td>
                         <td class="product-price">
                           ${finalprice}
@@ -1130,7 +1130,6 @@ cartTableBody?.addEventListener("click", function (e) {
   calculateCartTotal();
   saveCartToLocalStorage();
 });
-// tableCartAdd();
 // ==========================================================================
 // Cart page
 
@@ -1179,6 +1178,25 @@ document.querySelectorAll(".cart-submit").forEach((button) =>
   })
 );
 
+// ===========================================================================================
+// Product Details Page
+function addDetails() {
+  productDetailsSec && productDetailsSec.classList.add("product-item");
+  productDetailsSec && (productDetailsSec.dataset.id = products[0].id);
+  productDetailsSec && (productDetailsSec.dataset.name = products[0].name);
+  productDetailsSec && (productDetailsSec.dataset.mrp = products[0].mrp);
+  productDetailsSec &&
+    (productDetailsSec.dataset.sellingPrice = products[0].sellingPrice);
+  productDetailsSec &&
+    (productDetailsSec.dataset.images = products[0].images[0]);
+}
+addDetails();
+
+productDetailsSec?.addEventListener("click", function (e) {
+  addWishlist(e);
+  addCart(e);
+});
+
 // =========================================================================================
 // Add wishlist
 function getWishlistProducts() {
@@ -1196,54 +1214,47 @@ function updateWishlistCount() {
 updateWishlistCount();
 
 allProductsContainer.forEach((currProductSec) => {
-  currProductSec.addEventListener("click", function (e) {
-    const wishlistBtn = e.target.closest(".wishlist-btn");
-
-    if (!wishlistBtn) return;
-    e.preventDefault();
-
-    wishlistAll = getWishlistProducts();
-
-    const currProduct = e.target.closest(".product-item");
-
-    const currProductDetails = {
-      id: currProduct.dataset.id,
-      name: currProduct.dataset.name,
-      mrp: currProduct.dataset.mrp,
-      sellingPrice: currProduct.dataset.sellingPrice,
-      images: currProduct.dataset.images,
-    };
-
-    // Check if the product already exists in the wishlist
-    const productExistsInWishlist = wishlistAll.find(
-      (item) => item.id === currProductDetails.id
-    );
-
-    if (productExistsInWishlist) {
-      // Remove the product if it's already in the wishlist
-      wishlistBtn.classList.remove("wishlist-active");
-      removeWishlist(currProductDetails.id);
-    } else {
-      // Add to wishlist if not already present
-      wishlistBtn.classList.add("wishlist-active");
-      wishlistAll.push(currProductDetails);
-    }
-
-    getWishlistProducts();
-    updateWishlistCount();
-    saveWishlistToLocalStorage();
-    cleanuUpDom();
-  });
+  currProductSec.addEventListener("click", addWishlist);
 });
 
-// function updateClasslist(){
-//   const activeWishlistIcon = document.querySelectorAll(".wishlist-active");
-//   const activeWishlistProduct = activeWishlistIcon.closest(".product-item");
+function addWishlist(e) {
+  const wishlistBtn = e.target.closest(".wishlist-btn");
 
-//   wishlistAll.find(currWishlistProduct => {
+  if (!wishlistBtn) return;
+  e.preventDefault();
 
-//   })
-// }
+  wishlistAll = getWishlistProducts();
+
+  const currProduct = e.target.closest(".product-item");
+
+  const currProductDetails = {
+    id: currProduct.dataset.id,
+    name: currProduct.dataset.name,
+    mrp: currProduct.dataset.mrp,
+    sellingPrice: currProduct.dataset.sellingPrice,
+    images: currProduct.dataset.images,
+  };
+
+  // Check if the product already exists in the wishlist
+  const productExistsInWishlist = wishlistAll.find(
+    (item) => item.id === currProductDetails.id
+  );
+
+  if (productExistsInWishlist) {
+    // Remove the product if it's already in the wishlist
+    wishlistBtn.classList.remove("wishlist-active");
+    removeWishlist(currProductDetails.id);
+  } else {
+    // Add to wishlist if not already present
+    wishlistBtn.classList.add("wishlist-active");
+    wishlistAll.push(currProductDetails);
+  }
+
+  getWishlistProducts();
+  updateWishlistCount();
+  saveWishlistToLocalStorage();
+  cleanuUpDom();
+}
 
 // Function to remove the wishlist product
 function removeWishlist(productId) {
@@ -1311,10 +1322,12 @@ wishlistAll.forEach((currProduct) => {
     const wishlistProduct = wishlistProductContent(currProduct);
     wishlistProductSec?.appendChild(wishlistProduct);
 
-    // Add wishlist-active class for items in the wishlist
     const wishlistBtns = document.querySelectorAll(".wishlist-btn");
+
+    // Add wishlist-active class for items in the wishlist
     wishlistBtns.forEach((btn) => {
       const productItem = btn.closest(".product-item");
+
       const productId = productItem.dataset.id;
 
       if (wishlistAll.some((item) => item.id === productId)) {

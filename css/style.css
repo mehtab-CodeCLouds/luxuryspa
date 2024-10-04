@@ -7015,11 +7015,6 @@ Blog Style 01
   margin-bottom: 10px;
   transition: all 0.3s ease-in-out;
 }
-.product .product-item .product-image .custom-icon ul li .wishlist-active i::before {
-  content: "\f004";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 700;
-}
 .product .product-item .product-image .custom-icon ul li a.icon-bg {
   background: #F3DCD4;
 }
@@ -7098,6 +7093,12 @@ Blog Style 01
 .product .product-item:hover .custom-icon.wishlist-btn {
   opacity: 1;
   right: 0;
+}
+
+.wishlist-active i::before {
+  content: "\f004";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
 }
 
 .product.wishlist-product-sec {
@@ -7218,6 +7219,7 @@ Blog Style 01
   text-align: center;
   justify-content: center;
   display: inline-flex;
+  align-items: center;
 }
 .shop-single .product-detail .product-summary a i {
   color: #F2A68D;

@@ -56,14 +56,6 @@
               transition: all 0.3s ease-in-out;
             }
 
-            .wishlist-active i {
-              &::before {
-                content: "\f004";
-                font-family: "Font Awesome 6 Free";
-                font-weight: 700;
-              }
-            }
-
             a.icon-bg {
               background: $gray-1;
             }
@@ -174,6 +166,14 @@
         right: 0;
       }
     }
+  }
+}
+
+.wishlist-active i {
+  &::before {
+    content: "\f004";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 700;
   }
 }
 
@@ -334,6 +334,7 @@
         text-align: center;
         justify-content: center;
         display: inline-flex;
+        align-items: center;
 
         i {
           color: $primary;
